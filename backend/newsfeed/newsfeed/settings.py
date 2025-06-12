@@ -18,11 +18,11 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-ROOT_URLCONF = 'newsfeed.urls'
+ROOT_URLCONF = 'newsfeed.newsfeed.urls'
 
 TEMPLATES = []
 
-WSGI_APPLICATION = 'newsfeed.wsgi.application'
+WSGI_APPLICATION = 'newsfeed.newsfeed.wsgi.application'
 
 DATABASES = {
     'default': {
