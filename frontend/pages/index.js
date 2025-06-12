@@ -33,11 +33,11 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Newsfeed</h1>
-      {toast && <div style={{ background: '#333', color: '#fff', padding: '10px' }}>{toast}</div>}
-      <ul>
+      <header>Newsfeed</header>
+      {toast && <div className="toast">{toast}</div>}
+      <ul className="news-list">
         {items.map((item, idx) => (
-          <li key={idx}>
+          <li key={idx} className="news-item">
             <a href={item.link} target="_blank" rel="noopener noreferrer">
               {item.title}
             </a>
