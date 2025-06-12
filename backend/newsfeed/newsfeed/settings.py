@@ -8,6 +8,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
+    'corsheaders',
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
     'rest_framework',
@@ -15,6 +16,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
 
@@ -51,3 +53,8 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
     'UNAUTHENTICATED_USER': None,
 }
+
+# Allow the local Next.js frontend to make cross-origin requests
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
