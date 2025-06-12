@@ -6,6 +6,10 @@ from a Django REST API and display it with a Next.js front‑end.
 The backend fetches entries from an external RSS feed and exposes them through
 `/api/newsfeed/`. The frontend consumes this endpoint and renders the list.
 
+### prototype sample image
+
+![newsfeed_screenshot](https://github.com/user-attachments/assets/d58ce17e-7523-4a5f-8124-917a4a339ca1)
+
 ## Backend (Django)
 
 The Django project lives in `backend/`. Dependencies are listed in
