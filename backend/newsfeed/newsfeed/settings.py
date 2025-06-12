@@ -20,7 +20,20 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'newsfeed.newsfeed.urls'
 
-TEMPLATES = []
+# Enable Django templates so the REST framework's browsable API works
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+            ],
+        },
+    },
+]
 
 WSGI_APPLICATION = 'newsfeed.newsfeed.wsgi.application'
 
@@ -32,3 +45,9 @@ DATABASES = {
 }
 
 STATIC_URL = '/static/'
+
+# Disable Django authentication to keep the project minimal
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [],
+    'UNAUTHENTICATED_USER': None,
+}
