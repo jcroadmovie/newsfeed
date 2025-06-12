@@ -1,4 +1,5 @@
-django>=4.2
-djangorestframework>=3.14
-feedparser>=6.0
-django-cors-headers>=4.3
+# Required Python packages for the Django backend
+django>=4.2                 # main web framework
+djangorestframework>=3.14   # API utilities for Django
+feedparser>=6.0             # parses external RSS feeds
+django-cors-headers>=4.3    # allows cross-origin requests from the frontend
